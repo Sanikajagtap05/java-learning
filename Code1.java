@@ -26,26 +26,45 @@ public class Code1 {
             // boolean h=true;
             // System.out.println("Value of h is - "+h);
 
-            // Student Information Card
+
+
+            // // Student Information Card
               
+            // String name = "Sanika";
+            // System.out.println("Name : "+name );
 
-            String name = "Sanika";
-            System.out.println("Name : "+name );
+            // int age = 21;
+            // System.out.println("Age  : "+age);
 
-            int age = 21;
-            System.out.println("Age  : "+age);
+            // int roll = 52;
+            // System.out.println("Roll no "+roll);
 
-            int roll = 52;
-            System.out.println("Roll no "+roll);
+            // String branch = "Computer Science";
+            // System.out.println("Branch  : "+branch);
 
-            String branch = "Computer Science";
-            System.out.println("Branch  : "+branch);
+            // double cgpa = 9.14;
+            // System.out.println("CGPA  : "+cgpa);
 
-            double cgpa = 9.14;
-            System.out.println("CGPA  : "+cgpa);
+            // boolean hosteller = true;
+            // System.out.println("Hosteller : "+hosteller);
 
-            boolean hosteller = true;
-            System.out.println("Hosteller : "+hosteller);
+
+            //Arithmetic Opretions
+            // int a = 25;
+            // int b = 8;
+
+            // int c = a+b;
+            // int d = a*b;
+            // int e = a/b;
+            // int f = a%b;
+            // int g = a-b;
+
+            // System.out.println("Addition : "+c);
+            // System.out.println("Substraction : "+g);
+            // System.out.println("Multiplication :"+d);
+            // System.out.println("Division : "+e);
+            // System.out.println("Reminder : "+f);
+            // System.out.println(" This is the basic calculations done using variables and arthimatic opretors");
 
 
         }
