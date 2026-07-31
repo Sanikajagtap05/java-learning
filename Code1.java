@@ -50,6 +50,7 @@ public class Code1 {
 
 
             //Arithmetic Opretions
+
             // int a = 25;
             // int b = 8;
 
@@ -65,6 +66,17 @@ public class Code1 {
             // System.out.println("Division : "+e);
             // System.out.println("Reminder : "+f);
             // System.out.println(" This is the basic calculations done using variables and arthimatic opretors");
+
+            //Calculatiing Area & Perimeter 
+            int length = 12;
+            int width = 5;
+
+            int perimeter=2*(length+width);
+            int area = length*width;
+
+            System.out.println("Area  = "+area);
+            System.out.println("Perimeter = "+perimeter);
+
 
 
         }
