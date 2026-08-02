@@ -102,7 +102,6 @@ public class Code3 {
         // System.out.println(ch);
 
         int a = 'a';
-
         System.out.println(a);
     }
 }
