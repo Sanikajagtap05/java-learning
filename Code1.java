@@ -68,6 +68,7 @@ public class Code1 {
             // System.out.println(" This is the basic calculations done using variables and arthimatic opretors");
 
             //Calculatiing Area & Perimeter 
+            
             int length = 12;
             int width = 5;
 
