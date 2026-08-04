@@ -38,7 +38,7 @@ public class Code6 {
     // String result=(num %5 ==0)?"Divisible":"Indivisible";
     // System.out.println(result);
 
-
+    //Nested Question 
     //     int a=58;
     //     int b=85;
     //     int c=65;
@@ -50,7 +50,10 @@ public class Code6 {
     // int year =2024;
     // String result = (year %4 ==0)?"leap year":"Not an leap year";
     // System.out.println(result);
+   
 
+
+    // Nested Question
     // int num =0;
     // String result= (num > 0)?"Positive":(num < 0)?"Negative":"Zero";
     // System.out.println(result);
