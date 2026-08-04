@@ -56,13 +56,12 @@ public class Code5 {
         System.out.println(a);
         System.out.println(b);
 
-
         int x = 3;
 
-int y = x++ + ++x + x-- + --x;
+        int y = x++ + ++x + x-- + --x;
 
-System.out.println(x);
-System.out.println(y);
+        System.out.println(x);
+        System.out.println(y);
 
     }
 
