@@ -1,5 +1,5 @@
 public class Code6 {
-    public static void main(String argd[]){
+    public static void main(String arg[]){
     // Ternary Opretors 
 
     //condition?true_statement:false_statement;
