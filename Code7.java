@@ -1,6 +1,6 @@
 public class Code7 {
     public static void main(String[] args) {
-        //Conditional Statements Practice Questions - IF-Else
+        //Conditional Statements Practice Questions - IF-Else & Neseted IF- else
 
         // int a = 15;
         // int b = 10;
