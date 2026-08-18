@@ -53,7 +53,7 @@ public class Code8 {
          * System.out.println("Cool");
          * }
          */
-
+        /*
         int amount;
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the amount of Shopping : ");
@@ -66,6 +66,29 @@ public class Code8 {
             System.out.println("No discount available");
         }
 
+        */
+
+
+        int units;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the no of units burned this month : ");
+        units = sc.nextInt();
+        if ( units >= 0  && units <= 100){
+            System.out.println("amout to be paied is : "+units*5);
+        }
+        else if(units >= 101 && units <= 200){
+            System.out.println("amout to be paied is : "+units*7);
+        }
+        else if(units >= 201 && units <=300){
+            System.out.println("Amount to be paid is :"+units*10);
+        } 
+        else if(units > 300){
+            System.out.println("Amount to be paid is :"+units*15);
+        }
+
+
+
     }
 
 }
+
