@@ -15,6 +15,7 @@ public class Code8 {
         //     System.out.println("Negative");
         //   }
 
+        /*
         int marks;
         Scanner  sc =new Scanner(System.in);
         System.out.print("Enter the marks : ");
@@ -35,6 +36,23 @@ public class Code8 {
         else{
             System.out.println("Fail");
         }
+         */
+      
+        int temp ;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the temprature : ");
+        temp =sc.nextInt();
+        if(temp > 40){
+            System.out.println("Very Hot");
+        }
+        else if(temp > 30){
+            System.out.println("Hot");
+        }
+        else{
+            System.out.println("Cool");
+        }
+
+
 
 
 
