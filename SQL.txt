@@ -1,0 +1,423 @@
+ter password: *****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 11
+Server version: 8.0.46 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2026, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.02 sec)
+
+mysql> create database cnc;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| cnc                |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> use cnc;
+Database changed
+mysql> create table employee (eid int,ename varchar(50),eloc varchar(50),esal float);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> insert into employee values(1,'Raj','Nerul',90000);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into employee values(2,'Vishal','Panvel',93000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee values(3,'Neha','Panvel',99000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee values(4,'karan','Nerul',96000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select eid,ename from employee;
++------+--------+
+| eid  | ename  |
++------+--------+
+|    1 | Raj    |
+|    2 | Vishal |
+|    3 | Neha   |
+|    4 | karan  |
++------+--------+
+4 rows in set (0.00 sec)
+
+mysql> select * from employee;
++------+--------+--------+-------+
+| eid  | ename  | eloc   | esal  |
++------+--------+--------+-------+
+|    1 | Raj    | Nerul  | 90000 |
+|    2 | Vishal | Panvel | 93000 |
+|    3 | Neha   | Panvel | 99000 |
+|    4 | karan  | Nerul  | 96000 |
++------+--------+--------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select * from employee where eid=2;
++------+--------+--------+-------+
+| eid  | ename  | eloc   | esal  |
++------+--------+--------+-------+
+|    2 | Vishal | Panvel | 93000 |
++------+--------+--------+-------+
+1 row in set (0.00 sec)
+
+mysql> select * from employee where eloc="panvel";
++------+--------+--------+-------+
+| eid  | ename  | eloc   | esal  |
++------+--------+--------+-------+
+|    2 | Vishal | Panvel | 93000 |
+|    3 | Neha   | Panvel | 99000 |
++------+--------+--------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select * from employee where esal>92000;
++------+--------+--------+-------+
+| eid  | ename  | eloc   | esal  |
++------+--------+--------+-------+
+|    2 | Vishal | Panvel | 93000 |
+|    3 | Neha   | Panvel | 99000 |
+|    4 | karan  | Nerul  | 96000 |
++------+--------+--------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select * from employee where esal>92000 and eloc="Nerul";
++------+-------+-------+-------+
+| eid  | ename | eloc  | esal  |
++------+-------+-------+-------+
+|    4 | karan | Nerul | 96000 |
++------+-------+-------+-------+
+1 row in set (0.00 sec)
+
+mysql> select * from employee where eloc="vashi" or eloc="Nerul";
++------+-------+-------+-------+
+| eid  | ename | eloc  | esal  |
++------+-------+-------+-------+
+|    1 | Raj   | Nerul | 90000 |
+|    4 | karan | Nerul | 96000 |
++------+-------+-------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select * from employee where eloc in("nerul","vashi");
++------+-------+-------+-------+
+| eid  | ename | eloc  | esal  |
++------+-------+-------+-------+
+|    1 | Raj   | Nerul | 90000 |
+|    4 | karan | Nerul | 96000 |
++------+-------+-------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select * from employee where eloc not in("nerul","vashi");
++------+--------+--------+-------+
+| eid  | ename  | eloc   | esal  |
++------+--------+--------+-------+
+|    2 | Vishal | Panvel | 93000 |
+|    3 | Neha   | Panvel | 99000 |
++------+--------+--------+-------+
+2 rows in set (0.00 sec)
+
+mysql> update employee set eloc="Vashi",esal=89000 where eid=4;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from employee;
++------+--------+--------+-------+
+| eid  | ename  | eloc   | esal  |
++------+--------+--------+-------+
+|    1 | Raj    | Nerul  | 90000 |
+|    2 | Vishal | Panvel | 93000 |
+|    3 | Neha   | Panvel | 99000 |
+|    4 | karan  | Vashi  | 89000 |
++------+--------+--------+-------+
+4 rows in set (0.00 sec)
+
+mysql> delete from employee where eid=4;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from employee;
++------+--------+--------+-------+
+| eid  | ename  | eloc   | esal  |
++------+--------+--------+-------+
+|    1 | Raj    | Nerul  | 90000 |
+|    2 | Vishal | Panvel | 93000 |
+|    3 | Neha   | Panvel | 99000 |
++------+--------+--------+-------+
+3 rows in set (0.00 sec)
+
+mysql> trunate table employee;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'trunate table employee' at line 1
+mysql> truncate table employee;
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> select * from employee;
+Empty set (0.00 sec)
+
+mysql> drop table employee;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> select * from employee;
+ERROR 1146 (42S02): Table 'cnc.employee' doesn't exist
+mysql> create table employee (eid int,ename varchar(50),eloc varchar(50),esal float);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> insert into employee values(1,'Raj','Nerul',90000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee values(2,'Vishal','Panvel',93000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee values(3,'Neha','Panvel',99000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee values(4,'karan','Nerul',96000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from employee;
++------+--------+--------+-------+
+| eid  | ename  | eloc   | esal  |
++------+--------+--------+-------+
+|    1 | Raj    | Nerul  | 90000 |
+|    2 | Vishal | Panvel | 93000 |
+|    3 | Neha   | Panvel | 99000 |
+|    4 | karan  | Nerul  | 96000 |
++------+--------+--------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select * from employee where esal>910000;
+Empty set (0.00 sec)
+
+mysql> select * from employee where esal>91000;
++------+--------+--------+-------+
+| eid  | ename  | eloc   | esal  |
++------+--------+--------+-------+
+|    2 | Vishal | Panvel | 93000 |
+|    3 | Neha   | Panvel | 99000 |
+|    4 | karan  | Nerul  | 96000 |
++------+--------+--------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select * from employee where esal>91000 order by esal asc;
++------+--------+--------+-------+
+| eid  | ename  | eloc   | esal  |
++------+--------+--------+-------+
+|    2 | Vishal | Panvel | 93000 |
+|    4 | karan  | Nerul  | 96000 |
+|    3 | Neha   | Panvel | 99000 |
++------+--------+--------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select * from employee where esal>91000 order by esal desc;
++------+--------+--------+-------+
+| eid  | ename  | eloc   | esal  |
++------+--------+--------+-------+
+|    3 | Neha   | Panvel | 99000 |
+|    4 | karan  | Nerul  | 96000 |
+|    2 | Vishal | Panvel | 93000 |
++------+--------+--------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select * from employee where esal>91000 order by ename asc;
++------+--------+--------+-------+
+| eid  | ename  | eloc   | esal  |
++------+--------+--------+-------+
+|    4 | karan  | Nerul  | 96000 |
+|    3 | Neha   | Panvel | 99000 |
+|    2 | Vishal | Panvel | 93000 |
++------+--------+--------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select eloc from employee;
++--------+
+| eloc   |
++--------+
+| Nerul  |
+| Panvel |
+| Panvel |
+| Nerul  |
++--------+
+4 rows in set (0.00 sec)
+
+mysql> select eloc from employee group by eloc;
++--------+
+| eloc   |
++--------+
+| Nerul  |
+| Panvel |
++--------+
+2 rows in set (0.00 sec)
+
+mysql> select distinct eloc from employee;
++--------+
+| eloc   |
++--------+
+| Nerul  |
+| Panvel |
++--------+
+2 rows in set (0.00 sec)
+
+mysql> select max(esal) from employee;
++-----------+
+| max(esal) |
++-----------+
+|     99000 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> select max(esal) total from employee;
++-------+
+| total |
++-------+
+| 99000 |
++-------+
+1 row in set (0.00 sec)
+
+mysql> select min(esal) total from employee;
++-------+
+| total |
++-------+
+| 90000 |
++-------+
+1 row in set (0.00 sec)
+
+mysql> select sum(esal) total from employee;
++--------+
+| total  |
++--------+
+| 378000 |
++--------+
+1 row in set (0.00 sec)
+
+mysql> select avg(esal) total from employee;
++-------+
+| total |
++-------+
+| 94500 |
++-------+
+1 row in set (0.00 sec)
+
+mysql> select count(esal) total from employee;
++-------+
+| total |
++-------+
+|     4 |
++-------+
+1 row in set (0.00 sec)
+
+mysql> select count(esal) total from employee where eloc="nerul";
++-------+
+| total |
++-------+
+|     2 |
++-------+
+1 row in set (0.00 sec)
+
+mysql> select eloc,count(eloc) from employee group by eloc;
++--------+-------------+
+| eloc   | count(eloc) |
++--------+-------------+
+| Nerul  |           2 |
+| Panvel |           2 |
++--------+-------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from employee where esal=max(esal);
+ERROR 1111 (HY000): Invalid use of group function
+mysql> select * from employee where esal=(select max(esal) from employee);
++------+-------+--------+-------+
+| eid  | ename | eloc   | esal  |
++------+-------+--------+-------+
+|    3 | Neha  | Panvel | 99000 |
++------+-------+--------+-------+
+1 row in set (0.00 sec)
+
+mysql> select * from employee where ename like "a%";
+Empty set (0.00 sec)
+
+mysql> select * from employee where ename like "r%";
++------+-------+-------+-------+
+| eid  | ename | eloc  | esal  |
++------+-------+-------+-------+
+|    1 | Raj   | Nerul | 90000 |
++------+-------+-------+-------+
+1 row in set (0.00 sec)
+
+mysql> select * from employee where ename like "%a";
++------+-------+--------+-------+
+| eid  | ename | eloc   | esal  |
++------+-------+--------+-------+
+|    3 | Neha  | Panvel | 99000 |
++------+-------+--------+-------+
+1 row in set (0.00 sec)
+
+mysql> select * from employee where ename like "%a%";
++------+--------+--------+-------+
+| eid  | ename  | eloc   | esal  |
++------+--------+--------+-------+
+|    1 | Raj    | Nerul  | 90000 |
+|    2 | Vishal | Panvel | 93000 |
+|    3 | Neha   | Panvel | 99000 |
+|    4 | karan  | Nerul  | 96000 |
++------+--------+--------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select * from employee;
++------+--------+--------+-------+
+| eid  | ename  | eloc   | esal  |
++------+--------+--------+-------+
+|    1 | Raj    | Nerul  | 90000 |
+|    2 | Vishal | Panvel | 93000 |
+|    3 | Neha   | Panvel | 99000 |
+|    4 | karan  | Nerul  | 96000 |
++------+--------+--------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select * from employee linit 2;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2' at line 1
+mysql> select * from employee limit 2;
++------+--------+--------+-------+
+| eid  | ename  | eloc   | esal  |
++------+--------+--------+-------+
+|    1 | Raj    | Nerul  | 90000 |
+|    2 | Vishal | Panvel | 93000 |
++------+--------+--------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select * from employee limit 2,2;
++------+-------+--------+-------+
+| eid  | ename | eloc   | esal  |
++------+-------+--------+-------+
+|    3 | Neha  | Panvel | 99000 |
+|    4 | karan | Nerul  | 96000 |
++------+-------+--------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select * from employee limit 1,2;
++------+--------+--------+-------+
+| eid  | ename  | eloc   | esal  |
++------+--------+--------+-------+
+|    2 | Vishal | Panvel | 93000 |
+|    3 | Neha   | Panvel | 99000 |
++------+--------+--------+-------+
+2 rows in set (0.00 sec)
