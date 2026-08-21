@@ -214,6 +214,64 @@ public class Code9 {
         }
         
         */
+
+        /* 
+
+        //enter the month identify season
+        int month;
+        System.out.println("Enter the Month No - ");
+        month =sc.nextInt();
+        
+        switch(month){
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("Winter"); 
+            break;
+
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Spring");
+                break;
+            
+            case 6:
+            case 7:
+            case 8 :
+                System.out.println("Summer");
+                break;
+            
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Autumn");
+                break;
+
+
+            }
+ 
+            */
+
+        System.out.println("1. Tea - ₹15");
+        System.out.println("2. Coffee - ₹25");
+        System.out.println("3. Sandwich - ₹50");
+        System.out.println("4. Pizza - ₹120");
+        System.out.println("5. Burger - ₹80");
+
+        System.out.print("Enter your choice: ");
+        int choice = sc.nextInt();
+        switch(choice){
+            case 1 :
+              System.out.println("TEA = 15");
+              break;
+            case 2:
+            System.out.println("Coffe = 25");
+            break;
+            case 3:
+            System.out.println("Sandwich = 50");
+            break;
+            
+        }
     }
 
 }
