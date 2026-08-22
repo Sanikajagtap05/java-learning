@@ -115,7 +115,16 @@ public class Code10 {
 
         */
 
-        
+        int count = 0;
+    
+        System.out.println("Enter the no - ");
+        int num = sc.nextInt();
+        while(num >0){
+         num = num/10;
+         count++;
+        }
+         System.out.println("Count = "+count);
+
     }
 
 }
