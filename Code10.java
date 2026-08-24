@@ -101,29 +101,100 @@ public class Code10 {
          * }
          * System.out.println("Sum = "+sum);
          */
- 
-        /* 
-        int sum = 0;
-        System.out.println("Enter the no - ");
-        int n= sc.nextInt();
-        int i = 1;
-        while(i<=n){
-            sum = sum +i;
-            i++;
-        }
-        System.out.println("Sum = "+sum);
 
+        /*
+         * int sum = 0;
+         * System.out.println("Enter the no - ");
+         * int n= sc.nextInt();
+         * int i = 1;
+         * while(i<=n){
+         * sum = sum +i;
+         * i++;
+         * }
+         * System.out.println("Sum = "+sum);
+         * 
+         */
+        /*
+         * int count = 0;
+         * 
+         * System.out.println("Enter the no - ");
+         * int num = sc.nextInt();
+         * while(num >0){
+         * num = num/10;
+         * count++;
+         * }
+         * System.out.println("Count = "+count);
+         */
+
+        /*
+         * int count = 0;
+         * System.out.println("Enter the no - ");
+         * int n =sc.nextInt();
+         * while(n>0){
+         * n =n/10;
+         * count++;
+         * }
+         * System.out.println( "Count = "+count);
+         */
+
+        /*
+        int count =0;
+        System.out.println("Enter the no - ");
+        int n =sc.nextInt();
+        while( n>0){
+            n=n/10;
+            count++;
+
+        }
+        System.out.println("count - "+count);
+         */
+
+         /* 
+        System.out.println("Enter the no - ");
+        int n = sc.nextInt();
+        int reverse=0;
+
+        while(n>0){
+            int digit= n % 10;
+            reverse = reverse *10 +digit;
+            n = n / 10;
+        }
+        System.out.println("Reverse = "+reverse);
+        */
+        /* 
+        int reverse = 0;
+        System.out.println("Enter the no - ");
+        int n = sc.nextInt();
+        while(n>0){
+             int digit = n% 10;
+             reverse = reverse *10 + digit;
+             n = n/10;
+
+        }
+        System.out.println("Revers - "+reverse);
         */
 
-        int count = 0;
-    
+         /* 
+        int reverse =0;
         System.out.println("Enter the no - ");
-        int num = sc.nextInt();
-        while(num >0){
-         num = num/10;
-         count++;
+        int n =sc.nextInt();
+        while(n>0){
+            int digit =n%10;
+            reverse = reverse * 10 +digit;
+            n =n/10;
         }
-         System.out.println("Count = "+count);
+        System.out.println("Reverse  - "+reverse);
+*/
+
+int reverse =0;
+System.out.println("enter the no - ");
+int n =sc.nextInt();
+while(n>0){
+    int num = n%10;
+    reverse =reverse *10+num;
+    n = n/10;
+}
+System.out.println(+reverse);
 
     }
 
