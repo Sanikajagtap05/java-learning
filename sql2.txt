@@ -1,0 +1,121 @@
+Enter password: *****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.46 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2026, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show db
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'db' at line 1
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| cnc                |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sanika             |
+| sys                |
++--------------------+
+6 rows in set (0.08 sec)
+
+mysql> use sanika;
+Database changed
+mysql> use cnc;
+Database changed
+mysql> create table dept (did int primary key auto_increment,dname varchar(30));
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> insert into dept values("IT");
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into dept (dname) values("IT");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into dept (dname) values("Admin");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into dept (dname) values("Account");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select *n from dept;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'n from dept' at line 1
+mysql> select * from dept;
++-----+---------+
+| did | dname   |
++-----+---------+
+|   1 | IT      |
+|   2 | Admin   |
+|   3 | Account |
++-----+---------+
+3 rows in set (0.00 sec)
+
+mysql> create table project (pid int primary key auto_increment,pname varchar(40));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> insert into project(pname) values("E-COM");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into project(pname) values("Banking");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into project(pname) values("Insurance");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from project;
++-----+-----------+
+| pid | pname     |
++-----+-----------+
+|   1 | E-COM     |
+|   2 | Banking   |
+|   3 | Insurance |
++-----+-----------+
+3 rows in set (0.00 sec)
+
+mysql> create table emp (eid int primary key,ename varchar(40),eloc varchar(50),esal int,did int,pid int,foreign key(did) references dept(did),foreign key(pid) references project(pid));
+Query OK, 0 rows affected (0.14 sec)
+
+mysql> insert into emp values(101,'Raj','Nerul',90000,1,2);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into emp values(102,'Vishal','Nerul',91000,1,1);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into emp values(103,'Kiran','Vashi',96000,2,1);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into emp values(103,'Sahil','Vashi',99000,2,2);
+ERROR 1062 (23000): Duplicate entry '103' for key 'emp.PRIMARY'
+mysql> insert into emp values(104,'Sahil','Vashi',99000,5,2);
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`cnc`.`emp`, CONSTRAINT `emp_ibfk_1` FOREIGN KEY (`did`) REFERENCES `dept` (`did`))
+mysql> insert into emp values(104,'Sahil','Vashi',99000,2,2);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from emp;
++-----+--------+-------+-------+------+------+
+| eid | ename  | eloc  | esal  | did  | pid  |
++-----+--------+-------+-------+------+------+
+| 101 | Raj    | Nerul | 90000 |    1 |    2 |
+| 102 | Vishal | Nerul | 91000 |    1 |    1 |
+| 103 | Kiran  | Vashi | 96000 |    2 |    1 |
+| 104 | Sahil  | Vashi | 99000 |    2 |    2 |
++-----+--------+-------+-------+------+------+
+4 rows in set (0.00 sec)
+
+mysql> select * from emp where did in(select did from dept where dname="it");
++-----+--------+-------+-------+------+------+
+| eid | ename  | eloc  | esal  | did  | pid  |
++-----+--------+-------+-------+------+------+
+| 101 | Raj    | Nerul | 90000 |    1 |    2 |
+| 102 | Vishal | Nerul | 91000 |    1 |    1 |
++-----+--------+-------+-------+------+------+
+2 rows in set (0.01 sec)
+
+mysql>
