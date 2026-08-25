@@ -47,8 +47,8 @@ public class Code12 {
         }
         System.out.println("Sum = "+sum);
 
-*/
-     int n ;
+
+/*         int n ;
      System.out.println("Enter the  no - " );
      n=sc.nextInt();
      int fact =1;
@@ -58,6 +58,29 @@ public class Code12 {
 
      }
   System.out.println("FACTORIAL -"+fact);
-    }
+  */
+ /* 
+  int n;
+  System.out.println("Enter the no of which factorial is reqiuered - ");
+  n =sc.nextInt();
+  int fact =1 ;
+  for(int i = 1; i<=n;i++){
+    fact = fact *i;
+  }
+  System.out.println("Fact - "+fact);
+  */
 
+  /* 
+  int  n;
+  System.out.println("Enter the no  of which square is required - ");
+  n =sc.nextInt();
+  int square = 0;
+  for(int i = 0;i<=n;i++){
+     square = n*n;
+  }
+  System.out.println("Square of "+n+" is = "+square);
+  */
+
+   
+    }
 }
