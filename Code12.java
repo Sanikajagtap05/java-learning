@@ -81,6 +81,8 @@ public class Code12 {
   System.out.println("Square of "+n+" is = "+square);
   */
 
+  
+
    
     }
 }
