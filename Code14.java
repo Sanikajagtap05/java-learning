@@ -94,7 +94,30 @@ public class Code14 {
           System.out.println(marks[1]);
           System.out.println(marks[5]);
  */ 
- //Chnage the Element of array
+/* 
+   //Change the Element of array
+   int marks[] = { 82, 91, 55, 70, 55,65};
+   marks[5] = 45;
+   System.out.println(marks[5]);
+   for(int i =0;i<marks.length;i++){
+    System.out.println("Index = " +marks[i]);
+   } 
+   */
+//some challenging Questions
+/* 
+//Print the greater than 50 from the array
+ int marks[] = { 40, 91, 55, 35, 55,65};
+ for(int i=0;i<marks.length;i++){
+    if (marks[i]>50){
+        System.out.println("Index " + i + " = " + marks[i]);
+    }
+
+ }
+*/
+
+
+      
+
 
     }
 }
