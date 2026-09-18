@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Code15 {
     public static void main(String[] args) {
         //practing array 2D array
@@ -17,6 +19,31 @@ public class Code15 {
             System.out.println();
          }
 
-         
+         // taking input from user for 2D array
+         Scanner sc = new Scanner(System.in);
+
+         System.out.println("Enter the no of rows : ");
+         int rows = sc.nextInt();
+         System.out.println("Enter the no of columns : ");
+         int cols =sc.nextInt();
+
+         int arr[][] = new int[rows][cols];
+         System.out.println("Enter the elements of the array : ");
+         for(int i= 0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                arr[i][j]=sc.nextInt();
+
+            }
+         }
+
+         // printing the user-input 2D array
+         System.out.println("The elements of the array are : ");
+         for(int i= 0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                System.out.print(arr[i][j]+ " ");
+            }
+            System.out.println();
+         }
+
 }
 }
