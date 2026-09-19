@@ -49,31 +49,96 @@ public class Code15 {
          //  Print the elementts column wise
         //  
         
-        //find th summ of all the elements in a 2D array
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the no of the rows :");
-        int rows = sc.nextInt();
-        System.out.println("Enter the no of columns : ");
-        int cols = sc.nextInt();
+//         //find th summ of all the elements in a 2D array
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("Enter the no of the rows :");
+//         int rows = sc.nextInt();
+//         System.out.println("Enter the no of columns : ");
+//         int cols = sc.nextInt();
 
-        int arr [][] = new int[rows][cols];
-        System.out.println("Enter the elements of the array : ");
-        for (int i=0;i<rows;i++){
-            for(int j=0;j<cols;j++){
-                arr[i][j]= sc.nextInt();
+//         int arr [][] = new int[rows][cols];
+//         System.out.println("Enter the elements of the array : ");
+//         for (int i=0;i<rows;i++){
+//             for(int j=0;j<cols;j++){
+//                 arr[i][j]= sc.nextInt();
 
-            }
-        }
+//             }
+//         }
 
-        int sum = 0;
-        for(int i=0;i<rows;i++){
-            for(int j=0;j<cols;j++){
-                sum +=arr[i][j];
-            }
-        }
-        System.out.println("The sum of all elements in the array is : " + sum);
+//         int sum = 0;
+//         for(int i=0;i<rows;i++){
+//             for(int j=0;j<cols;j++){
+//                 sum +=arr[i][j];
+//             }
+//         }
+//         System.out.println("The sum of all elements in the array is : " + sum);
+//     }
+// }
+
+// // Find the sum of all the elements in a 2D array
+// Scanner sc = new Scanner (System.in);
+// System.out.println("Enter the no of rows :");
+// int rows = sc.nextInt();
+// System.out.println("Enter the no of columns : ");
+// int cols = sc.nextInt();
+
+// int arr [][] = new int[rows][cols];
+// System.out.println("Enter the elements of the array : ");
+// for(int i=0;i<rows;i++){
+//     for(int j=0;j<cols;j++){
+//         arr[i][j]= sc.nextInt();
+//     }
+// }
+
+// int sum = 0;
+// for (int i=0;i<rows;i++){
+//     for(int j=0;j<cols;j++){
+//         sum = sum +arr[i][j];
+
+//     }
+// }
+// System.out.println("The sum of array is :"+sum);
+   
+// }
+// }
+
+// Find the largest element in a 2D array
+
+Scanner sc =new Scanner(System.in);
+System.out.println("Enter the no of rows :");
+int rows =sc.nextInt();
+System.out.println("Enter the no of columns : ");
+int cols  =sc.nextInt();
+
+System.out.println("Enter the elements of the array : ");
+int arr[][] = new int[rows][cols];
+for(int i=0;i<rows;i++){
+    for(int j=0;j<cols;j++){
+        arr[i][j]=sc.nextInt();
     }
 }
 
+System.out.println("The elements of the array are : ");
+for(int i=0;i<rows;i++){
+    for(int j=0;j<cols;j++){
+        System.out.print(arr[i][j]+ " ");
 
+    }
+    System.out.println();
+}
+
+int largest = arr[0][0];
+for(int i=0;i<rows;i++){
+    for(int j=0;j<cols;j++){
+        if(arr[i][j]>largest){
+            largest = arr[i][j];
+        
+        }
+
+    }
+}
+        System.out.println("The largest element in the array is : " + largest);
+
+    }
+}
 
