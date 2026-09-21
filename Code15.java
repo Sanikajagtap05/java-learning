@@ -104,41 +104,109 @@ public class Code15 {
 
 // Find the largest element in a 2D array
 
-Scanner sc =new Scanner(System.in);
-System.out.println("Enter the no of rows :");
-int rows =sc.nextInt();
-System.out.println("Enter the no of columns : ");
-int cols  =sc.nextInt();
+// Scanner sc =new Scanner(System.in);
+// System.out.println("Enter the no of rows :");
+// int rows =sc.nextInt();
+// System.out.println("Enter the no of columns : ");
+// int cols  =sc.nextInt();
 
-System.out.println("Enter the elements of the array : ");
-int arr[][] = new int[rows][cols];
-for(int i=0;i<rows;i++){
-    for(int j=0;j<cols;j++){
-        arr[i][j]=sc.nextInt();
-    }
-}
+// System.out.println("Enter the elements of the array : ");
+// int arr[][] = new int[rows][cols];
+// for(int i=0;i<rows;i++){
+//     for(int j=0;j<cols;j++){
+//         arr[i][j]=sc.nextInt();
+//     }
+// }
 
-System.out.println("The elements of the array are : ");
-for(int i=0;i<rows;i++){
-    for(int j=0;j<cols;j++){
-        System.out.print(arr[i][j]+ " ");
+// System.out.println("The elements of the array are : ");
+// for(int i=0;i<rows;i++){
+//     for(int j=0;j<cols;j++){
+//         System.out.print(arr[i][j]+ " ");
 
-    }
-    System.out.println();
-}
+//     }
+//     System.out.println();
+// }
 
-int largest = arr[0][0];
-for(int i=0;i<rows;i++){
-    for(int j=0;j<cols;j++){
-        if(arr[i][j]>largest){
-            largest = arr[i][j];
+// int largest = arr[0][0];
+// for(int i=0;i<rows;i++){
+//     for(int j=0;j<cols;j++){
+//         if(arr[i][j]>largest){
+//             largest = arr[i][j];
         
+//         }
+
+//     }
+// }
+//         System.out.println("The largest element in the array is : " + largest);
+
+//     }
+// }
+
+
+//finding the smallest element in a 2D array
+
+// Scanner sc = new Scanner(System.in);
+// System.out.println("Enter the no of rows :");
+// int rows = sc.nextInt();
+// System.out.println("Enter the no of columns : ");
+// int cols  = sc.nextInt();
+// int arr[][]= new int[rows][cols];
+// System.out.println("Enter the elements of the array : ");
+// for(int i=0;i<rows;i++){
+//     for(int j=0;j<cols;j++){
+//         arr[i][j]=sc.nextInt();
+//     }
+// }
+
+// System.out.println("The elements of the array are : ");
+// for(int i=0;i<rows;i++){
+//     for(int j=0;j<cols;j++){
+//         System.out.print(arr[i][j]+" ");
+//     }
+//     System.out.println();
+// }
+
+// int smallest =arr[0][0];
+// for
+// (int i=0;i<rows;i++){
+//     for(int j=0;j<cols;j++){
+//         if (arr[i][j] < smallest){
+//             smallest = arr[i][j];
+//         }
+//     }
+// }
+// System.out.println("The smallest element in the array is : " + smallest);
+// }
+// }
+
+Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the no of rows :");
+        int rows = sc.nextInt();    
+        System.out.println("Enter the no of columns : ");
+        int cols = sc.nextInt();
+        int arr[][] = new int[rows][cols];
+        System.out.println("Enter the elements of the array : ");
+        for(int i=0;i<rows;i++){            
+            for(int j=0;j<cols;j++){
+                arr[i][j]=sc.nextInt();
+            }
         }
 
+        System.out.println("The elements of the array are : ");
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
+
+         int even = arr[0][0];
+for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                if (arr[i][j] % 2 == 0){
+                    System.out.println("The even elements in the array are : " + arr[i][j]);
+                }
+            }
+        }
     }
 }
-        System.out.println("The largest element in the array is : " + largest);
-
-    }
-}
-
