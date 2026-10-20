@@ -56,6 +56,33 @@ public class Code19{
         System.out.println("Name : " +s2.name+" Age: "+s2.age);
     }
 }*/
+// copy constructor 
+class Student{
+    int age ;
+    String name;
+
+    Student(int a ,String n ){
+        this.age = a;
+        this.name = n ;
+    }
+    Student(Student other){
+        this.age= other.age;
+        this.name = other.name;
+
+    }
+    void display(){
+        System.out.println("Name : " +name );
+        System.out.println("Age : " +age);
+    }
+}
+public class Code19{
+    public static void main(String args[]){
+         Student s1 = new Student(21,"Sanika");
+         Student s2= new Student(s1); 
+         s1.display();
+         s2.display();
+    }
+}
 /* 
 class Employee{
     String name;
@@ -78,7 +105,7 @@ public class Code19{
     }
 }
 */
-class Employee{
+/*class Employee{
 String name;
 int age ;
 String dept;
@@ -107,6 +134,6 @@ System.out.println("Age employee3 -     "+e3.age);
 System.out.println("Department of employee3 - " +e3.dept);
 }
 }
-
+*/
 
 
