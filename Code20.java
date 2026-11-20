@@ -21,7 +21,7 @@ public class Code20{
     }
 }*/
 
-//here i dont want to give fixed name and ag ethen i=we will do this 
+//here i dont want to give fixed name and age then  we will do this 
 /* 
 class Human{
     private int age ;
@@ -57,7 +57,6 @@ public class Code20{
 }
     
 */
-
 //taking input from user 
 
 import java.util.Scanner;
@@ -98,3 +97,5 @@ public class Code20{
 
     }
 }
+
+
