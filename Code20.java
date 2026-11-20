@@ -1,6 +1,6 @@
 // 
 // Atucal Encapslation
-/*(class Human{
+/* class Human{
     private  int age = 21;
     private String name =  "Sanika ";
 
