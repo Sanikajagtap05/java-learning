@@ -1,4 +1,4 @@
-
+/*
 class Human{
     private  int age = 25;
     private String name= "Sanika";
@@ -21,3 +21,4 @@ public class Practice {
     }
     
 }
+ */
